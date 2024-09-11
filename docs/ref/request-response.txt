@@ -833,6 +833,13 @@ Attributes
 
     A bytestring representing the content, encoded from a string if necessary.
 
+.. attribute:: HttpResponse.text
+
+    .. versionadded:: 5.2
+
+    A string representation of :attr:`HttpResponse.content`, decoded using the
+    response's :attr:`HttpResponse.charset` (defaulting to ``UTF-8`` if empty).
+
 .. attribute:: HttpResponse.cookies
 
     A :py:obj:`http.cookies.SimpleCookie` object holding the cookies included
