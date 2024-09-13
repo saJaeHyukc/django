@@ -1279,6 +1279,8 @@ with the following notable differences:
   :attr:`~StreamingHttpResponse.streaming_content` attribute. This can be used
   in middleware to wrap the response iterable, but should not be consumed.
 
+* It has no ``text`` attribute, as it would require iterating the response object.
+
 * You cannot use the file-like object ``tell()`` or ``write()`` methods.
   Doing so will raise an exception.
 

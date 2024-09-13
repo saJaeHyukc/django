@@ -467,6 +467,12 @@ class StreamingHttpResponse(HttpResponseBase):
         )
 
     @property
+    def text(self):
+        raise AttributeError(
+            "This %s instance has no `text` attribute." % self.__class__.__name__
+        )
+
+    @property
     def streaming_content(self):
         if self.is_async:
             # pull to lexical scope to capture fixed reference in case
